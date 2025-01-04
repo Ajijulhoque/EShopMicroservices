@@ -11,12 +11,13 @@
         }
     }
 
-    public class DeleteBasketCommandHandler : ICommandHandler<DeleteBasketCommand,DeleteBasketResult>
+    public class DeleteBasketCommandHandler(IBasketRepository repository) : ICommandHandler<DeleteBasketCommand,DeleteBasketResult>
     {
         public async Task<DeleteBasketResult> Handle(DeleteBasketCommand request, CancellationToken cancellationToken)
         {
             var userName = request.UserName;
             //Delete from BD
+            await repository.DeleteBasket(userName, cancellationToken).ConfigureAwait(false);
             //Update cache
 
             return new DeleteBasketResult(true);
