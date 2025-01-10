@@ -2,7 +2,7 @@
 {
     public class Order : Aggregate<OrderId>
     {
-        private readonly List<OrderItem> _orderItems;
+        private readonly List<OrderItem> _orderItems = [];
         public IReadOnlyCollection<OrderItem> OrderItems => _orderItems.AsReadOnly();
 
         public CustomerId CustomerId { get; private set; } = default!;
@@ -17,7 +17,7 @@
             private set { }
         }
 
-        public static Order Create(OrderId id, CustomerId customerId, OrderName orderName, Address shippingAddress, Address billingAddress, Payment payment, List<OrderItem> orderItems)
+        public static Order Create(OrderId id, CustomerId customerId, OrderName orderName, Address shippingAddress, Address billingAddress, Payment payment)
         {
             var order = new Order
             {
