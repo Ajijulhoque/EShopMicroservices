@@ -12,3 +12,9 @@ global using Ordering.Application.Exceptions;
 global using BuildingBlocks.Exceptions;
 
 global using BuildingBlocks.Behaviors;
+
+global using MediatR;
+
+global using Microsoft.Extensions.Logging;
+
+global using Ordering.Domain.Events;
