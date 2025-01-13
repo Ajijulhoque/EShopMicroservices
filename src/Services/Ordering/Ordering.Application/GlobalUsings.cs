@@ -10,3 +10,5 @@ global using Ordering.Domain.Models.ValueObjects;
 global using Ordering.Application.Exceptions;
 
 global using BuildingBlocks.Exceptions;
+
+global using BuildingBlocks.Behaviors;
