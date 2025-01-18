@@ -24,3 +24,8 @@ global using Microsoft.EntityFrameworkCore;
 global using Ordering.Application.Extensions;
 
 global using BuildingBlocks.Pagination;
+
+global using MassTransit;
+
+global using Microsoft.FeatureManagement;
+
