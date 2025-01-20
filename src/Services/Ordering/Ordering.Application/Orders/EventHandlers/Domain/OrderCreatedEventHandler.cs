@@ -1,6 +1,7 @@
 ﻿namespace Ordering.Application.Orders.EventHandlers.Domain
 {
-    public class OrderCreatedEventHandler(IPublishEndpoint publishEndpoint, IFeatureManager featureManager, ILogger<OrderCreatedEvent> logger) : INotificationHandler<OrderCreatedEvent>
+    public class OrderCreatedEventHandler(IPublishEndpoint publishEndpoint, IFeatureManager featureManager, ILogger<OrderCreatedEvent> logger) 
+        : INotificationHandler<OrderCreatedEvent>
     {
         public async Task Handle(OrderCreatedEvent domainEvent, CancellationToken cancellationToken)
         {
